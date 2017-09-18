@@ -4,7 +4,7 @@
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>Account</title>
+      <title>LASER</title>
       <!-- CORE CSS-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css"> 
@@ -27,6 +27,17 @@
     padding: 15px !important;
     
 }
+
+.input-field .prefix {
+    position: absolute;
+    width: 3rem;
+    font-size: 2rem;
+    -webkit-transition: color .2s;
+    -moz-transition: color .2s;
+    -o-transition: color .2s;
+    -ms-transition: color .2s;
+    transition: color .2s;
+    line-height: 1.7;
       </style>
    <body class="dashboard-body">
       <ul id="dropdown1" class="dropdown-content">
@@ -42,7 +53,7 @@
          <nav>
             <div class="nav-wrapper">
                <a href="#!" class="brand-logo img-logo"><img src="img/add.png">
-               </a><span class="text-logo">Account</span>
+               </a><span class="text-logo">LASER</span>
                <ul class="right hide-on-med-and-down">
                   <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Welcome Alok Bajpai<i class="material-icons right">arrow_drop_down</i></a>
                   </li>
@@ -57,17 +68,32 @@
                <!-- <h4 class="header2">Search</h4> -->
                <div class="row">
                   <form class="formValidate" id="formValidate" method="get" action="" novalidate="novalidate">
+                     <div class="col s12 m12">
+                        <h5>Search</h5></div>
+                        
                       <div class="row">
                         
-                        <div class="col s12 m3">
-                           <i class="material-icons prefix" style="top: 11px;"> search</i>
-                          <input type="text" id="autocomplete-input" class="autocomplete ui-autocomplete-input" autocomplete="off"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
-                          
+                        
+                          <div class="input-field col s12 m2">
+          <i class="material-icons prefix">search</i>
+          <input type="text" id="autocomplete-input" class="autocomplete">
+          <label for="autocomplete-input">Autocomplete</label>
+        </div>
+
+                        
+                        <div class="col s12 m4" style="line-height: 6;">Transaction Type<input name="group1" type="radio" id="test1" />
+      <label for="test1">Credit</label>
+      <input name="group1" type="radio" id="test2" />
+      <label for="test2">Debit</label>
+       <input name="group1" type="radio" id="test3" />
+      <label for="test3">Both</label>
 
                         </div>
-                        <div class="col s12 m3"></div>
-                        <div class="col s12 m3"></div>
-                        <div class="col s12 m3"></div>
+                        <div class="col s12 m2 input-field "><i class="material-icons prefix">perm_contact_calendar</i><input type="text" class="datepicker"><label for="icon_prefix">From</label></div>
+                        <div class="col s12 m2 input-field "><i class="material-icons prefix">perm_contact_calendar</i><input type="text" class="datepicker1"><label for="icon_prefix">To</label></div>
+                        <div class="col s12 m2" style="
+    line-height: 5;
+"><a href="#" class="waves-effect waves-light btn">Go</a></div>
 
 
 
@@ -121,7 +147,7 @@
       <script type="text/javascript" src="js/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
       <script type="text/javascript" src="js/dropify.min.js"></script>
-      <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.material.min.js"></script>
+     <!--  <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.material.min.js"></script> -->
       <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 
       
@@ -133,10 +159,38 @@
     // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
     
 $('#example').DataTable( {
-        searching: false,bFilter: false, bInfo: false
+        bFilter: false, bInfo: false
     } );
 
+ $('input.autocomplete').autocomplete({
+    data: {
+      "Apple": null,
+      "Microsoft": null,
+      "Google": 'https://placehold.it/250x250'
+    },
+    limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
+    onAutocomplete: function(val) {
+      // Callback function when value is autcompleted.
+    },
+    minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
+  });
 
+ $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15, // Creates a dropdown of 15 years to control year,
+    today: 'Today',
+    clear: 'Clear',
+    close: 'Ok',
+    closeOnSelect: false // Close upon selecting a date,
+  });
+ $('.datepicker1').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15, // Creates a dropdown of 15 years to control year,
+    today: 'Today',
+    clear: 'Clear',
+    close: 'Ok',
+    closeOnSelect: false // Close upon selecting a date,
+  });
 
   });
        

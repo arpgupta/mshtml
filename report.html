@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Report</title>
+      <!-- CORE CSS-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+      <link rel="stylesheet" type="text/css" href="css/dropify.min.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="shortcut icon" type="image/png" href="img/login.png" />
+      <link rel="stylesheet" href="css/materialize.min.css">
+      <style type="text/css">
+         .placeholder {
+         width: 175px;
+         height: 150px;
+         background-repeat: no-repeat;
+         background-size: contain;
+         border: 2px solid #aaaaaa;
+         }
+         .search-c{
+         padding: 15px !important;
+         }
+         
+         .tabs .tab a:hover {
+         color: #000000;
+         }
+         .tabs .indicator {
+         position: absolute;
+         bottom: 0;
+         height: 2px;
+         background-color: #0b5a92;
+         will-change: left, right;
+         }
+         .tabs .tab a {
+         color: #0b5a92;
+         display: block;
+         width: 100%;
+         height: 100%;
+         text-overflow: ellipsis;
+         overflow: hidden;
+         -webkit-transition: color .28s ease;
+         -moz-transition: color .28s ease;
+         -o-transition: color .28s ease;
+         -ms-transition: color .28s ease;
+         transition: color .28s ease;
+         }
+         td, th {
+    padding: 15px 5px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+    border-radius: 2px;
+    border: 1px solid #f5f2f0;
+}
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #f7f7f9;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.card-block {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+.card {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+#Individual>tbody>tr>td{
+   border: none;
+}
+#Individual{
+       border: 1px solid #f5f2f0;
+
+}
+
+         /*.Epay{
+         display: none;
+         }
+         */      
+      </style>
+   <body class="dashboard-body">
+      <ul id="dropdown1" class="dropdown-content">
+         <li><a href="login.html">Login</a>
+         </li>
+         <li><a href="#!">Profile</a>
+         </li>
+         <li class="divider"></li>
+         <li><a href="#!">Logout</a>
+         </li>
+      </ul>
+      <div class="navbar-fixed">
+         <nav>
+            <div class="nav-wrapper">
+               <a href="#!" class="brand-logo img-logo"><i class="material-icons left" style="
+                  font-size: 58px;
+                  margin: -7px;
+                  ">library_books</i>
+               </a><span class="text-logo">Report</span>
+               <ul class="right hide-on-med-and-down">
+                  <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Welcome Alok Bajpai<i class="material-icons right">arrow_drop_down</i></a>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </div>
+      <div class="container_b">
+         <div class="valign-wrapper row ">
+            <div class="col s12 valign">
+               <div class="card-panel search-c">
+                  <!-- <h4 class="header2">Search</h4> -->
+                  <div class="row">
+                     <form class="formValidate" id="formValidate" method="get" action="" novalidate="novalidate">
+                        <div class="row">
+                           <div class="col s12 m8">
+                              <ul class="tabs">
+                                 <li class="tab col s3"><a href="#Individual">Individual Student</a></li>
+                                 <li class="tab col s3"><a class="active" href="#Batch">Batch </a></li>
+                                 <li class="tab col s3 "><a href="#test3">Course</a></li>
+                              </ul>
+                           </div>
+                           <div id="Individual" class="col s12 m12">
+                           
+
+                           <div class="card">
+  <div class="card-header">
+    Individual Student Wise
+  </div>
+  <div class="card-block">
+    <div class="row" id="batch1">
+                              <div class="col s3 m3 input-field" style="margin-left: 42px;">
+                                 <i class="material-icons prefix" style="top: 11px;"> search</i>
+                          <input type="text" id="autocomplete-input" class="autocomplete ui-autocomplete-input" autocomplete="off"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+                          <label for="autocomplete-input" class="">Search Account</label>
+                              </div>
+                             
+                              <div class="col s3 m3">
+                                 <label>Paid Report    </label>
+                                 <select class="browser-default">
+                                    <option value="" disabled selected>Paid Report</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                 </select>
+                              </div>
+                              <div class="col s3 m3"  style="line-height: 5.6;" >
+                                 <a class="waves-effect waves-light btn">Go</a>
+                              </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col s3 m3"  style="line-height: 5.6; float: right;" >
+                                 <a class="waves-effect waves-light btn" style="float: right;">Print</a>
+                              </div>
+                              </div>
+
+                              <div class="row">
+                                 <table id="Individual">
+                                    <tbody>
+                                    <tr>
+                                       <td class="right-align" width="40%">
+                                         <h6> Admmission No./ Roll no</h6>
+                                       </td>
+                                       <td width="15%" class="text-center">
+                                          <h6>DEM103/2</h6>
+                                       </td>
+                                       <td width="15%">
+                                          Name Of Student
+                                       </td>
+                                       <td>
+                                          <h6>Adarsh</h6>
+                                       </td>
+                                       </tr>
+                                       <tr>
+                                       <td class="right-align" width="40%">
+                                         <h6> Class Section</h6>
+                                       </td>
+                                       <td width="15%" class="text-center">
+                                          <h6>ICT-MSIST</h6>
+                                       </td>
+                                       <td width="15%">
+                                          Name Of Parents
+                                       </td>
+                                       <td>
+                                          <h6>Parents Namw</h6>
+                                       </td>
+                                       </tr>
+                                       <tr>
+                                       <td class="right-align" width="40%">
+                                         <h6> Conatact No.</h6>
+                                       </td>
+                                       <td width="15%" class="text-center">
+                                          <h6>9876543210</h6>
+                                       </td>
+                                       <td width="15%">
+                                          Address
+                                       </td>
+                                       <td>
+                                          <h6>sxyzabc</h6>
+                                       </td>
+                                       </tr>
+                                       <tr>
+                                         <td class="right-align" width="40%">
+                                             <h6>Total Amount</h6>
+                                          </td>
+                                          <td width="15%" class="text-center">
+                                             15.15
+                                          </td>
+                                        <td width="15%">
+                                          </td>
+                                          <td></td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+
+  </div>
+</div>
+
+                           </div>
+                           <div id="Batch" class="col s12 m12" >
+                           <h5>Batch Wise</h5>
+                           <br>
+                           <div class="row" id="batch1">
+                              <div class="col s3 m3">
+                                 <label>Select Course</label>
+                                 <select class="browser-default">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                 </select>
+                              </div>
+                              <div class="col s3 m3">
+                                 <label>Select Batch</label>
+                                 <select class="browser-default">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                 </select>
+                              </div>
+                              <div class="col s3 m3">
+                                 <label>Paid Report    </label>
+                                 <select class="browser-default">
+                                    <option value="" disabled selected>Paid Report</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                 </select>
+                              </div>
+                              <div class="col s3 m3"  style="line-height: 5.6;" >
+                                 <a class="waves-effect waves-light btn">Go</a>
+                              </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col s3 m3"  style="line-height: 5.6; float: right;" >
+                                 <a class="waves-effect waves-light btn" style="float: right;">Print</a>
+                              </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col s12 m12">
+                                    
+                         <table class="bordered" >
+                             <thead>
+                               <tr>
+                                   <th>Sl .No</th>
+                                   <th>Student Admission No / Roll No</th>
+                                   <th>Student Name</th>
+                                   <th>Course</th>
+                                   <th>Batch</th>
+                                   <th>Receipt Number</th>
+                                   <th>Paid Date</th>
+                                   <th>Total Amount   </th>
+                               </tr>
+                             </thead>
+
+
+                             <tbody>
+                               <tr>
+                                 <td>1</td>
+                                 <td>123</td>
+                                 <td>Arvind</td>
+                                 <td>1st</td>
+                                 <td>Batch A</td>
+                                 <td>1,2,3</td>
+                                 <td>12/31/2015</td>
+                                 <td>3000</td>
+                                 
+                               </tr>
+                               <tr>
+                                 <td>1</td>
+                                 <td>123</td>
+                                 <td>Arvind</td>
+                                 <td>1st</td>
+                                 <td>Batch A</td>
+                                 <td>1,2,3</td>
+                                 <td>12/31/2015</td>
+                                 <td>3000</td>
+                               </tr>
+                               <tr>
+                                <td>1</td>
+                                 <td>123</td>
+                                 <td>Arvind</td>
+                                 <td>1st</td>
+                                 <td>Batch A</td>
+                                 <td>1,2,3</td>
+                                 <td>12/31/2015</td>
+                                 <td>3000</td>
+                               </tr>
+                             </tbody>
+                           </table>
+                        </div>
+
+                              </div>
+
+                           </div>
+                        </div>
+                  </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      </div>
+      
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/dropify.min.js"></script>
+      <link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet">
+      </link>
+      <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js" ></script>
+      <script type="text/javascript"></script>
+      <!--materialize js-->
+   </body>
+</html>

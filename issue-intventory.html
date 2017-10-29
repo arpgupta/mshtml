@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Isse Item from Inventory</title>
+      <!-- CORE CSS-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css"> 
+      <link rel="stylesheet" type="text/css" href="css/dropify.min.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="shortcut icon" type="image/png" href="img/login.png" />
+      <link rel="stylesheet" href="css/materialize.min.css">
+      <style type="text/css">
+         .placeholder {
+    width: 175px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 2px solid #aaaaaa;
+}
+.search-c{
+    
+    padding: 15px !important;
+    
+}
+/*.Epay{
+  display: none;
+}
+*/      </style>
+   <body class="dashboard-body">
+      <ul id="dropdown1" class="dropdown-content">
+         <li><a href="login.html">Login</a>
+         </li>
+         <li><a href="#!">Profile</a>
+         </li>
+         <li class="divider"></li>
+         <li><a href="#!">Logout</a>
+         </li>
+      </ul>
+      <div class="navbar-fixed">
+         <nav>
+            <div class="nav-wrapper">
+               <a href="#!" class="brand-logo img-logo"><i class="material-icons left" style="
+    font-size: 58px;
+
+    margin: -7px;
+">library_books</i>
+               </a><span class="text-logo">Isse Item from Inventory</span>
+               <ul class="right hide-on-med-and-down">
+                  <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Welcome Alok Bajpai<i class="material-icons right">arrow_drop_down</i></a>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </div>
+     <div class="container_b">
+      <div class="valign-wrapper row ">
+         <div class="col s12 valign">
+            <div class="card-panel search-c">
+               <!-- <h4 class="header2">Search</h4> -->
+               <div class="row">
+                  <form class="formValidate" id="formValidate" method="get" action="" novalidate="novalidate">
+                      <div class="col s12 m6" style="
+    border-right: 2px solid #4c9de5;
+">
+                      
+
+                      <div class="row">
+                        <div class="col s6 m3">
+                          <h6>User Type</h6>
+                        </div>
+                        <div class="col s6 m9">
+                        <input name="group1" type="radio" id="test12" />
+                        <label for="test12">Student  </label>
+                     
+                        <input name="group1" type="radio" id="test13" />
+                        <label for="test13">Employee</label>
+
+                        </div>
+                        </div>
+                       <div class="row">
+                        <div class="col s6 m6">
+                        <br>
+                          <h6>Search Student  / Employee Name </h6>
+                        </div>
+
+                        
+                        <div class="col s6 m6 input-field" >
+                          
+                          <i class="material-icons prefix" style="top: 11px;"> search</i>
+                           <input type="text" id="autocomplete-input" class="autocomplete">
+          <label for="autocomplete-input">Search Student  / Employee Name </label>
+                        
+                        
+                        </div>
+                      
+                        </div>
+                        <div class="row">
+                        <div class="col s6 m6">
+                        <br>
+                          <h6>Search Inventory Item </h6>
+                        </div>
+
+                        
+                        <div class="col s6 m6 input-field" >
+                          
+                          <i class="material-icons prefix" style="top: 11px;"> search</i>
+                           <input type="text" id="autocomplete-input" class="autocomplete">
+          <label for="autocomplete-input">Search Inventory Item </label>
+                        
+                        
+                        </div>
+                       
+                        </div>
+                      
+                       
+                         
+                       
+                       
+                        <div class="row">
+                        <div class="col s6 m6">
+                        <a class="btn waves-effect waves-light  submit center-btn"  name="action">Add Item
+                           
+                           </a>
+                        </div>
+                       
+                        </div>
+                        <div class="row">
+                          <div class=" col s12 m12">
+                             <table class="bordered" >
+        <thead>
+          <tr>
+              <th>Item</th>
+              <th>Total Quantity</th>
+              <th>M.R.P</th>
+              <th>Quantity</th>
+              <th>Discount</th>
+              <th>Action</th>
+          </tr>
+        </thead>
+
+
+        <tbody>
+          <tr>
+            <td>Book</td>
+            <td>20</td>
+            <td>10</td>
+            <td>5</td>
+            <td>5</td>
+            <td><a href="#"><i class="material-icons left">cancel</i></a></td>
+          </tr>
+         
+        </tbody>
+      </table>
+                          </div>
+                        </div>
+                        <div class="row">
+                        <div class="col s6 m2">
+                        <br>
+                          <h6>Remark</h6>
+                        </div>
+                        <div class="input-field col s6 m4">
+           <textarea id="textarea1" class="materialize-textarea"></textarea>
+          <label for="textarea1">Remark</label>
+        </div>
+        <div class="col s6 m3">
+          Total Amount : 650 Rs
+        </div>
+        <div class="col s6 m3">
+         <a class="btn waves-effect waves-light  submit center-btn" style="font-size: 12px;
+        padding: 0px 5px;"  name="action">Make Payment
+                           
+                           </a>
+        </div>
+                        </div>
+ 
+                      </div>
+                      <div class="col s6 m6">
+                        <h6>Today's Paid Item</h6>
+                         <table class="bordered" >
+        <thead>
+          <tr>
+            <th>Student Name</th>
+              <th>Item</th>
+              <th>Quantity</th>
+              <th>M.R.P</th>
+              
+              <th>Discount</th>
+              <th>Total Paid</th>
+              <th>Action</th>
+          </tr>
+        </thead>
+
+
+        <tbody>
+           <tr>
+            <td>Book</td>
+            <td>20</td>
+            <td>10</td>
+            <td>5</td>
+            <td>5</td>
+            <td>12</td>
+            <td><a href="#"><i class="material-icons left">cancel</i></a></td>
+          </tr>
+         
+        </tbody>
+      </table>
+
+                      </div>
+                    
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+     
+      </div>
+
+      <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Account Creation(A/C)</h4>
+       <div class="row">
+                        <div class="col s6 m3">
+                        <br>
+                          <h6>Account Name</h6>
+                        </div>
+                        <div class="input-field col s6 m6">
+          <input placeholder="Placeholder" id="Amount" type="text" class="validate">
+          <label for="Amount">Account Name</label>
+        </div>
+                        </div>
+          <div class="row">
+                        <div class="col s6 m3">
+                        <br>
+                          <h6>Desc</h6>
+                        </div>
+                        <div class="input-field col s6 m6">
+          <input placeholder="Placeholder" id="Amount" type="text" class="validate">
+          <label for="Amount">Desc</label>
+        </div>
+                        </div>
+  <div class="input-field col s12 center-align ">
+       <button class="btn waves-effect waves-light  submit center-btn" type="submit" name="action">Submit
+                           <i class="mdi-content-send right"></i>
+                           </button>
+                           <button class="btn waves-effect waves-light  submit" type="submit" name="action" onclick="$('#modal1').modal('close');">Exit
+                           <i class="mdi-navigation-close right"></i>
+                           </button>
+                           </div>
+    </div>
+   
+  </div>
+      <!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
+       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/dropify.min.js"></script>
+       <link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet"></link> 
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js" ></script>
+<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
+      <script type="text/javascript">
+
+          $(document).ready(function() {
+         
+         
+ var fakedata = ['test1','test2','test3','test4','ietsanders'];
+$("input.autocomplete").autocomplete({source:fakedata});
+$('select').material_select();
+         });
+
+
+
+
+
+
+      $(document).ready(function(){
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    /*$('.modal').modal({
+       dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .5,
+    });*/
+
+ $('.Epay').hide();
+  $('.Cheque').hide();
+  $(document).ready(function() {
+    var t = $('#example').DataTable( {
+        "columnDefs": [ {
+            "searchable": false,
+            "orderable": false,
+            "targets": 0
+        } ],
+        "order": [[ 1, 'asc' ]]
+    } );
+ 
+    t.on( 'order.dt search.dt', function () {
+        t.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
+            cell.innerHTML = i+1;
+        } );
+    } ).draw();
+} );
+
+  });
+       function checkbox(id){
+          var test1= id.value;
+   var test2= id.value;
+ var test3=  id.value;
+
+if(test1==1){
+  $('.Epay').hide();
+  $('.Cheque').hide();
+}
+else if(test2==2){
+  $('.Epay').show();
+  $('.Cheque').hide();
+}
+
+else if(test3==3){
+  $('.Cheque').show();
+  $('.Epay').hide();
+}
+       }
+         $('.datepicker').pickadate({
+             selectMonths: true, // Creates a dropdown to control month
+             selectYears: 15 // Creates a dropdown of 15 years to control year
+         });
+         $(document).ready(function() {
+             // Basic
+             $('.dropify').dropify();
+             
+             // Translated
+         
+         });
+         
+         
+        
+      </script>
+      <!--materialize js-->
+   </body>
+</html>
